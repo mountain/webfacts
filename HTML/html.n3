@@ -1,0 +1,37 @@
+#
+# Schema for html
+#
+
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl:  <http://www.w3.org/2002/07/owl#>.
+
+@prefix : <#>.
+
+:HtmlSpec        a               owl:Class.
+:HtmlSpecElement a               owl:Class.
+
+:Type            a               owl:Class;
+                 rdfs:subClassOf :HtmlSpecElement.
+:Tag             a               owl:Class;
+                 rdfs:subClassOf :HtmlSpecElement.
+:Attribute       a               owl:Class;
+                 rdfs:subClassOf :HtmlSpecElement.
+
+:Containment     a               owl:Class;
+                 rdfs:subClassOf :HtmlSpecElement;
+                 rdfs:domain     :Tag;
+                 rdfs:range      :Attribute.
+
+:TypeOf          a               owl:Class;
+                 rdfs:subClassOf :HtmlSpecElement;
+                 rdfs:domain     :Attribute;
+                 rdfs:range      :Type.
+
+# properties for HtmlSpecElement
+
+:definedIn a           owl:ObjectProperty;
+           rdfs:domain :HtmlSpecElement;
+           rdfs:range  :HtmlSpec.
+
+

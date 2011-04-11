@@ -1,0 +1,15 @@
+#
+# Query for all
+#
+
+PREFIX b: <../browser.n3#>
+PREFIX c: <chrome.n3#>
+
+SELECT ?name ?version
+WHERE {
+  ?name b:name   c:Chrome.
+  ?x b:belongsTo c:Chrome;
+     b:version   ?version
+     b:releaseAt ?date.
+}
+ORDER BY ?date
