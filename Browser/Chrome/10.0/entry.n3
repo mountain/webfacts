@@ -4,12 +4,10 @@
 
 @prefix b: <../../browser.n3#>.
 @prefix c: <../chrome.n3#>.
-@prefix p: <../9.0/entry.n3#>.
 
 @prefix : <#>.
 
 :chrome a b:Browser;
     b:belongsTo c:Chrome;
     b:version   "10.0";
-    b:releaseAt "2011-03-08";
-    b:descendantOf p:chrome.
+    b:releaseAt "2011-03-08".
