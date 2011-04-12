@@ -8,10 +8,15 @@ An experimental n3 dataset for Web development facts
 ## Tools
 
  * validator: validate a specific n3 file
-  ** python validator.py FILE_PATH
+
+   python validator.py FILE_PATH
+
  * loader: load all n3 data
-  ** python loader.py
+
+   python loader.py
+
  * sparql: query a specific rq file
-  ** python sparql.py FILE_PATH
+
+   python sparql.py FILE_PATH
 
 
