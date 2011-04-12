@@ -3,7 +3,7 @@ An experimental n3 dataset for Web development facts
 ## Preparing
 
  * install rdflib: easy_install rdflib
- * install rdflib: easy_install rdfextras
+ * install rdfextras: easy_install rdfextras
 
 ## Tools
 
