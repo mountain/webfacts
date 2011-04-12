@@ -10,7 +10,7 @@
 #
 # For below input line
 #
-# charset   Charset char encoding of linked resource
+# charset,Charset,char encoding of linked resource
 #
 # It will generate
 #

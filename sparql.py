@@ -34,6 +34,9 @@ for err in errs:
     print err[1]
 print "---------------------------------"
 
+if len(err) > 0:
+    sys.exit(0)
+
 if len(sys.argv) == 0:
      sys.exit(0)
 

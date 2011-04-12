@@ -25,6 +25,9 @@ for err in errs:
     print err[1]
     print "---------------------------------"
 
+if len(err) > 0:
+    sys.exit(0)
+
 print "---------------------------------"
 print "all facts"
 for fact in g:
