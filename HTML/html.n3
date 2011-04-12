@@ -11,22 +11,21 @@
 :HtmlSpec        a               owl:Class.
 :HtmlSpecElement a               owl:Class.
 
-:Type            a               owl:Class;
-                 rdfs:subClassOf :HtmlSpecElement.
-:Tag             a               owl:Class;
-                 rdfs:subClassOf :HtmlSpecElement.
-:Attribute       a               owl:Class;
+:Type            a               owl:Class.
+:Tag             a               owl:Class.
+:Attribute       a               owl:Class.
+
+:Definition      a               owl:Class;
                  rdfs:subClassOf :HtmlSpecElement.
 
 :Containment     a               owl:Class;
-                 rdfs:subClassOf :HtmlSpecElement;
-                 rdfs:domain     :Tag;
-                 rdfs:range      :Attribute.
+                 rdfs:subClassOf :HtmlSpecElement.
 
-:TypeOf          a               owl:Class;
-                 rdfs:subClassOf :HtmlSpecElement;
-                 rdfs:domain     :Attribute;
-                 rdfs:range      :Type.
+# properties for HtmlSpec
+
+:name      a           owl:DatatypeProperty;
+           rdfs:domain :HtmlSpec;
+           rdfs:range  xsd:string.
 
 # properties for HtmlSpecElement
 
@@ -34,4 +33,23 @@
            rdfs:domain :HtmlSpecElement;
            rdfs:range  :HtmlSpec.
 
+# properties for Definition
+
+:for       a           owl:ObjectProperty;
+           rdfs:domain :Definition;
+           rdfs:range  :Tag.
+
+# properties for Containment
+
+:container a           owl:ObjectProperty;
+           rdfs:domain :Containment;
+           rdfs:range  :Tag.
+
+:containee a           owl:ObjectProperty;
+           rdfs:domain :Containment;
+           rdfs:range  :Attribute.
+
+:type      a           owl:ObjectProperty;
+           rdfs:domain :Containment;
+           rdfs:range  :Type.
 

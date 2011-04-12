@@ -9,4 +9,15 @@
 @prefix h: <html.n3#>.
 @prefix :  <#>.
 
+:Charset         a h:Type.
+:ContentType     a h:Type.
+:CDATA           a h:Type.
+:URI             a h:Type.
+:LanguageCode    a h:Type.
+:LinkTypes       a h:Type.
+:Character       a h:Type.
+:Shape           a h:Type.
+:Coords          a h:Type.
+:NUMBER          a h:Type.
+:Script          a h:Type.
 

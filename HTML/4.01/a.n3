@@ -6,5 +6,105 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl:  <http://www.w3.org/2002/07/owl#>.
 
+@prefix h: <../html.n3#>.
+@prefix t: <../tags.n3#>.
+@prefix a: <../attributes.n3#>.
+@prefix p: <../types.n3#>.
+@prefix s: <spec.n3#>.
+
 @prefix : <#>.
 
+:a         a            h:Definition;
+           h:definedIn  s:spec;
+           h:for        t:a.
+
+:charset   a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:a;
+           h:containee  a:charset;
+           h:type       t:Charset;
+           rdfs:comment "char encoding of linked resource".
+
+:type      a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:a;
+           h:containee  a:type;
+           h:type       t:ContentType;
+           rdfs:comment "advisory content type".
+
+:name      a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:a;
+           h:containee  a:name;
+           h:type       t:CDATA;
+           rdfs:comment "named link end".
+
+:href      a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:a;
+           h:containee  a:href;
+           h:type       t:URI;
+           rdfs:comment "URI for linked resource".
+
+:hreflang   a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:a;
+           h:containee  a:hreflang;
+           h:type       t:LanguageCode;
+           rdfs:comment "language code".
+
+:rel       a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:a;
+           h:containee  a:rel;
+           h:type       t:LinkTypes;
+           rdfs:comment "forward link types".
+
+:rev       a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:a;
+           h:containee  a:rev;
+           h:type       t:LinkTypes;
+           rdfs:comment "reverse link types".
+
+:accesskey a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:a;
+           h:containee  a:accesskey;
+           h:type       t:Character;
+           rdfs:comment "accessibility key character".
+
+:shape     a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:a;
+           h:containee  a:shape;
+           h:type       t:Shape;
+           rdfs:comment "for use with client-side image maps".
+
+:coords    a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:a;
+           h:containee  a:coords;
+           h:type       t:Coords;
+           rdfs:comment "for use with client-side image maps".
+
+:tabindex  a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:a;
+           h:containee  a:tabindex;
+           h:type       t:NUMBER;
+           rdfs:comment "position in tabbing order".
+
+:onfocus   a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:a;
+           h:containee  a:onfocus;
+           h:type       t:Script;
+           rdfs:comment "the element got the focus".
+
+:onblur    a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:a;
+           h:containee  a:onblur;
+           h:type       t:Script;
+           rdfs:comment "the element lost the focus".
