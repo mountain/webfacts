@@ -20,7 +20,7 @@
 
 :lang      a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:title;
            h:containee  a:lang;
            h:type       t:LanguageCode;
            h:mandatory  h:IMPLIED;
@@ -28,9 +28,8 @@
 
 :dir       a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:title;
            h:containee  a:dir;
            h:type       t:Direction;
            h:mandatory  h:IMPLIED;
            rdfs:comment "the base direction of directionally neutral text".
-

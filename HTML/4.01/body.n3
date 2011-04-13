@@ -20,7 +20,7 @@
 
 :lang      a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:body;
            h:containee  a:lang;
            h:type       t:LanguageCode;
            h:mandatory  h:IMPLIED;
@@ -28,7 +28,7 @@
 
 :dir       a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:body;
            h:containee  a:dir;
            h:type       t:Direction;
            h:mandatory  h:IMPLIED;
@@ -36,7 +36,7 @@
 
 :id        a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:body;
            h:containee  a:id;
            h:type       t:ID;
            h:mandatory  h:IMPLIED;
@@ -44,7 +44,7 @@
 
 :class     a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:body;
            h:containee  a:class;
            h:type       t:CDATA;
            h:mandatory  h:IMPLIED;
@@ -52,7 +52,7 @@
 
 :style     a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:body;
            h:containee  a:style;
            h:type       t:StyleSheet;
            h:mandatory  h:IMPLIED;
@@ -60,7 +60,7 @@
 
 :title     a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:body;
            h:containee  a:title;
            h:type       t:Text;
            h:mandatory  h:IMPLIED;
@@ -68,7 +68,7 @@
 
 :onclick   a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:body;
            h:containee  a:onclick;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -76,7 +76,7 @@
 
 :ondblclick a           h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:body;
            h:containee  a:ondblclick;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -84,7 +84,7 @@
 
 :onmousedown a          h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:body;
            h:containee  a:onmousedown;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -92,7 +92,7 @@
 
 :onmouseup a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:body;
            h:containee  a:onmouseup;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -100,7 +100,7 @@
 
 :onmouseover a          h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:body;
            h:containee  a:onmouseover;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -108,7 +108,7 @@
 
 :onmousemove a          h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:body;
            h:containee  a:onmousemove;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -116,7 +116,7 @@
 
 :onmouseout a           h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:body;
            h:containee  a:onmouseout;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -124,7 +124,7 @@
 
 :onkeypress a           h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:body;
            h:containee  a:onkeypress;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -132,7 +132,7 @@
 
 :onkeydown a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:body;
            h:containee  a:onkeydown;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -140,7 +140,7 @@
 
 :onkeyup   a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:body;
            h:containee  a:onkeyup;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -148,7 +148,7 @@
 
 :onload    a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:body;
            h:containee  a:onload;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -156,7 +156,7 @@
 
 :onunload  a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:body;
            h:containee  a:onunload;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;

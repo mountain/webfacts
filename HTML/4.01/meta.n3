@@ -18,17 +18,17 @@
            h:definedIn  s:spec;
            h:for        t:meta.
 
-:http-equiv a            h:Containment;
-            h:definedIn  s:spec;
-            h:container  t:a;
-            h:containee  a:http-equiv;
-            h:type       t:NAME;
-            h:mandatory  h:IMPLIED;
-            rdfs:comment "HTTP response header name".
+:http-equiv a           h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:meta;
+           h:containee  a:http-equiv;
+           h:type       t:NAME;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "HTTP response header name".
 
 :name      a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:meta;
            h:containee  a:name;
            h:type       t:NAME;
            h:mandatory  h:IMPLIED;
@@ -36,15 +36,15 @@
 
 :content   a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:meta;
            h:containee  a:content;
            h:type       t:CDATA;
-           h:mandatory  t:REQUIRED;
+           h:mandatory  h:REQUIRED;
            rdfs:comment "associated information".
 
 :scheme    a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:meta;
            h:containee  a:scheme;
            h:type       t:CDATA;
            h:mandatory  h:IMPLIED;

@@ -20,7 +20,7 @@
 
 :lang      a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:head;
            h:containee  a:lang;
            h:type       t:LanguageCode;
            h:mandatory  h:IMPLIED;
@@ -28,7 +28,7 @@
 
 :dir       a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:head;
            h:containee  a:dir;
            h:type       t:Direction;
            h:mandatory  h:IMPLIED;
@@ -36,8 +36,8 @@
 
 :profile   a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:head;
            h:containee  a:profile;
            h:type       t:URI;
            h:mandatory  h:IMPLIED;
-           rdfs:comment "named dictionary of meta info".
+           rdfs:comment "named dictionary of meta info --".

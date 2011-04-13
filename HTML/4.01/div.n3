@@ -1,5 +1,5 @@
 #
-# data for html4.01 a tag
+# data for html4.01 div tag
 #
 
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
@@ -14,13 +14,13 @@
 
 @prefix : <#>.
 
-:a         a            h:Definition;
+:div       a            h:Definition;
            h:definedIn  s:spec;
-           h:for        t:a.
+           h:for        t:div.
 
 :lang      a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:div;
            h:containee  a:lang;
            h:type       t:LanguageCode;
            h:mandatory  h:IMPLIED;
@@ -28,7 +28,7 @@
 
 :dir       a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:div;
            h:containee  a:dir;
            h:type       t:Direction;
            h:mandatory  h:IMPLIED;
@@ -36,7 +36,7 @@
 
 :id        a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:div;
            h:containee  a:id;
            h:type       t:ID;
            h:mandatory  h:IMPLIED;
@@ -44,7 +44,7 @@
 
 :class     a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:div;
            h:containee  a:class;
            h:type       t:CDATA;
            h:mandatory  h:IMPLIED;
@@ -52,7 +52,7 @@
 
 :style     a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:div;
            h:containee  a:style;
            h:type       t:StyleSheet;
            h:mandatory  h:IMPLIED;
@@ -60,7 +60,7 @@
 
 :title     a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:div;
            h:containee  a:title;
            h:type       t:Text;
            h:mandatory  h:IMPLIED;
@@ -68,7 +68,7 @@
 
 :onclick   a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:div;
            h:containee  a:onclick;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -76,7 +76,7 @@
 
 :ondblclick a           h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:div;
            h:containee  a:ondblclick;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -84,7 +84,7 @@
 
 :onmousedown a          h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:div;
            h:containee  a:onmousedown;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -92,7 +92,7 @@
 
 :onmouseup a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:div;
            h:containee  a:onmouseup;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -100,7 +100,7 @@
 
 :onmouseover a          h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:div;
            h:containee  a:onmouseover;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -108,7 +108,7 @@
 
 :onmousemove a          h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:div;
            h:containee  a:onmousemove;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -116,7 +116,7 @@
 
 :onmouseout a           h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:div;
            h:containee  a:onmouseout;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -124,7 +124,7 @@
 
 :onkeypress a           h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:div;
            h:containee  a:onkeypress;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -132,7 +132,7 @@
 
 :onkeydown a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:div;
            h:containee  a:onkeydown;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
@@ -140,112 +140,8 @@
 
 :onkeyup   a            h:Containment;
            h:definedIn  s:spec;
-           h:container  t:a;
+           h:container  t:div;
            h:containee  a:onkeyup;
            h:type       t:Script;
            h:mandatory  h:IMPLIED;
            rdfs:comment "a key was released".
-
-:charset   a            h:Containment;
-           h:definedIn  s:spec;
-           h:container  t:a;
-           h:containee  a:charset;
-           h:type       t:Charset;
-           h:mandatory  h:IMPLIED;
-           rdfs:comment "char encoding of linked resource".
-
-:type      a            h:Containment;
-           h:definedIn  s:spec;
-           h:container  t:a;
-           h:containee  a:type;
-           h:type       t:ContentType;
-           h:mandatory  h:IMPLIED;
-           rdfs:comment "advisory content type".
-
-:name      a            h:Containment;
-           h:definedIn  s:spec;
-           h:container  t:a;
-           h:containee  a:name;
-           h:type       t:CDATA;
-           h:mandatory  h:IMPLIED;
-           rdfs:comment "named link end".
-
-:href      a            h:Containment;
-           h:definedIn  s:spec;
-           h:container  t:a;
-           h:containee  a:href;
-           h:type       t:URI;
-           h:mandatory  h:IMPLIED;
-           rdfs:comment "URI for linked resource".
-
-:hreflang  a            h:Containment;
-           h:definedIn  s:spec;
-           h:container  t:a;
-           h:containee  a:hreflang;
-           h:type       t:LanguageCode;
-           h:mandatory  h:IMPLIED;
-           rdfs:comment "language code".
-
-:rel       a            h:Containment;
-           h:definedIn  s:spec;
-           h:container  t:a;
-           h:containee  a:rel;
-           h:type       t:LinkTypes;
-           h:mandatory  h:IMPLIED;
-           rdfs:comment "forward link types".
-
-:rev       a            h:Containment;
-           h:definedIn  s:spec;
-           h:container  t:a;
-           h:containee  a:rev;
-           h:type       t:LinkTypes;
-           h:mandatory  h:IMPLIED;
-           rdfs:comment "reverse link types".
-
-:accesskey a            h:Containment;
-           h:definedIn  s:spec;
-           h:container  t:a;
-           h:containee  a:accesskey;
-           h:type       t:Character;
-           h:mandatory  h:IMPLIED;
-           rdfs:comment "accessibility key character".
-
-:shape     a            h:Containment;
-           h:definedIn  s:spec;
-           h:container  t:a;
-           h:containee  a:shape;
-           h:type       t:Shape;
-           h:mandatory  h:IMPLIED;
-           rdfs:comment "for use with client-side image maps".
-
-:coords    a            h:Containment;
-           h:definedIn  s:spec;
-           h:container  t:a;
-           h:containee  a:coords;
-           h:type       t:Coords;
-           h:mandatory  h:IMPLIED;
-           rdfs:comment "for use with client-side image maps".
-
-:tabindex  a            h:Containment;
-           h:definedIn  s:spec;
-           h:container  t:a;
-           h:containee  a:tabindex;
-           h:type       t:NUMBER;
-           h:mandatory  h:IMPLIED;
-           rdfs:comment "position in tabbing order".
-
-:onfocus   a            h:Containment;
-           h:definedIn  s:spec;
-           h:container  t:a;
-           h:containee  a:onfocus;
-           h:type       t:Script;
-           h:mandatory  h:IMPLIED;
-           rdfs:comment "the element got the focus".
-
-:onblur    a            h:Containment;
-           h:definedIn  s:spec;
-           h:container  t:a;
-           h:containee  a:onblur;
-           h:type       t:Script;
-           h:mandatory  h:IMPLIED;
-           rdfs:comment "the element lost the focus".
