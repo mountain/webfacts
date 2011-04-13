@@ -16,7 +16,10 @@
 
 :head      a            h:Definition;
            h:definedIn  s:spec;
-           h:for        t:head.
+           h:for        t:head;
+           h:starTag    h:required;
+           h:endTag     h:required.
+
 
 :lang      a            h:Containment;
            h:definedIn  s:spec;

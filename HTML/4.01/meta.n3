@@ -16,7 +16,10 @@
 
 :meta      a            h:Definition;
            h:definedIn  s:spec;
-           h:for        t:meta.
+           h:for        t:meta;
+           h:starTag    h:required;
+           h:endTag     h:required.
+
 
 :http-equiv a           h:Containment;
            h:definedIn  s:spec;
