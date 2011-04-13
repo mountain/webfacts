@@ -1,3 +1,4 @@
+import sys
 import os
 import rdflib
 from os.path import join
@@ -25,7 +26,7 @@ for err in errs:
     print err[1]
     print "---------------------------------"
 
-if len(err) > 0:
+if len(errs) > 0:
     sys.exit(0)
 
 print "---------------------------------"
