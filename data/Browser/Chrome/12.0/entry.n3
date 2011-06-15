@@ -1,0 +1,15 @@
+#
+# data for chrome browser version 12.0
+#
+
+@prefix b: <../../browser.n3#>.
+@prefix c: <../chrome.n3#>.
+@prefix p: <../11.0/entry.n3#>.
+
+@prefix : <#>.
+
+:chrome a b:Browser;
+    b:belongsTo c:Chrome;
+    b:version   "12.0";
+    b:releaseAt "2011-04-05";
+    b:descendantOf p:chrome.

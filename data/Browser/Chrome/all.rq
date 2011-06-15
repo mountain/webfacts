@@ -1,0 +1,13 @@
+# Query for all chrome browsers
+
+PREFIX b: <$base/Browser/browser.n3#>
+PREFIX c: <$base/Browser/Chrome/chrome.n3#>
+
+SELECT ?name ?version ?date
+WHERE {
+  c:Chrome b:name ?name.
+  ?x b:belongsTo  c:Chrome;
+     b:version    ?version;
+     b:releaseAt  ?date.
+}
+ORDER BY ?date

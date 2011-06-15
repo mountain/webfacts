@@ -8,7 +8,7 @@ errs = []
 
 print "---------------------------------"
 print "loading..."
-for curdir, subdirs, files in os.walk('./'):
+for curdir, subdirs, files in os.walk('./data'):
     for f in files:
         p = join(curdir, f)
         if f.endswith('.n3'):

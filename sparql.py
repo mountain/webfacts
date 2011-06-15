@@ -16,7 +16,7 @@ errs = []
 
 print "---------------------------------"
 print "loading..."
-for curdir, subdirs, files in os.walk('./'):
+for curdir, subdirs, files in os.walk('./data'):
     for f in files:
         p = join(curdir, f)
         if f.endswith('.n3'):
@@ -34,7 +34,7 @@ for err in errs:
     print err[1]
 print "---------------------------------"
 
-if len(err) > 0:
+if len(errs) > 0:
     sys.exit(0)
 
 if len(sys.argv) == 0:
@@ -45,7 +45,7 @@ q = ""
 for ln in f.readlines():
     q = q + ln
 
-env = {"base": urljoin("file:///", urllib.pathname2url(os.path.abspath("./")))}
+env = {"base": urljoin("file:///", urllib.pathname2url(os.path.abspath("./data")))}
 q = Template(q).safe_substitute(env)
 
 ns = {}

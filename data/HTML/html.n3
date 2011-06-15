@@ -1,0 +1,76 @@
+#
+# Schema for html
+#
+
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl:  <http://www.w3.org/2002/07/owl#>.
+
+@prefix : <#>.
+
+:HtmlSpec        a               owl:Class.
+:HtmlSpecElement a               owl:Class.
+
+:Type            a               owl:Class.
+:Tag             a               owl:Class.
+:Attribute       a               owl:Class.
+
+:Definition      a               owl:Class;
+                 rdfs:subClassOf :HtmlSpecElement.
+
+:Containment     a               owl:Class;
+                 rdfs:subClassOf :HtmlSpecElement.
+
+:Mandatory       a               owl:Class.
+:IMPLIED         a               :Mandatory.
+:REQUIRED        a               :Mandatory.
+
+:Presence        a               owl:Class.
+:required        a               :Presence.
+:optional        a               :Presence.
+
+# properties for HtmlSpec
+
+:name      a           owl:DatatypeProperty;
+           rdfs:domain :HtmlSpec;
+           rdfs:range  xsd:string.
+
+# properties for HtmlSpecElement
+
+:definedIn a           owl:ObjectProperty;
+           rdfs:domain :HtmlSpecElement;
+           rdfs:range  :HtmlSpec.
+
+# properties for Definition
+
+:for       a           owl:ObjectProperty;
+           rdfs:domain :Definition;
+           rdfs:range  :Tag.
+
+:starTag   a           owl:ObjectProperty;
+           rdfs:domain :Definition;
+           rdfs:range  :Presence.
+
+:endTag    a           owl:ObjectProperty;
+           rdfs:domain :Definition;
+           rdfs:range  :Presence.
+
+# properties for Containment
+
+:container a           owl:ObjectProperty;
+           rdfs:domain :Containment;
+           rdfs:range  :Tag.
+
+:containee a           owl:ObjectProperty;
+           rdfs:domain :Containment;
+           rdfs:range  :Attribute.
+
+:type      a           owl:ObjectProperty;
+           rdfs:domain :Containment;
+           rdfs:range  :Type.
+
+:mandatory a           owl:ObjectProperty;
+           rdfs:domain :Containment;
+           rdfs:range  :Mandatory.
+

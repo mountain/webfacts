@@ -1,0 +1,54 @@
+#
+# data for html4.01 meta tag
+#
+
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl:  <http://www.w3.org/2002/07/owl#>.
+
+@prefix h: <../html.n3#>.
+@prefix t: <../tags.n3#>.
+@prefix a: <../attributes.n3#>.
+@prefix p: <../types.n3#>.
+@prefix s: <spec.n3#>.
+
+@prefix : <#>.
+
+:meta      a            h:Definition;
+           h:definedIn  s:spec;
+           h:for        t:meta;
+           h:starTag    h:required;
+           h:endTag     h:required.
+
+
+:http-equiv a           h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:meta;
+           h:containee  a:http-equiv;
+           h:type       t:NAME;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "HTTP response header name".
+
+:name      a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:meta;
+           h:containee  a:name;
+           h:type       t:NAME;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "metainformation name".
+
+:content   a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:meta;
+           h:containee  a:content;
+           h:type       t:CDATA;
+           h:mandatory  h:REQUIRED;
+           rdfs:comment "associated information".
+
+:scheme    a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:meta;
+           h:containee  a:scheme;
+           h:type       t:CDATA;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "select form of content".

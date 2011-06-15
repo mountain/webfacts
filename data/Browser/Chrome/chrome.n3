@@ -1,0 +1,12 @@
+#
+# Schema for chrome browser
+#
+
+@prefix b: <../browser.n3#>.
+@prefix l: <12.0/entry.n3#>.
+
+@prefix : <#>.
+
+:Chrome a b:BrowserFamily;
+    b:name          "Chrome";
+    b:latestVersion l:chrome.

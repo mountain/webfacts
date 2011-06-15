@@ -1,0 +1,150 @@
+#
+# data for html4.01 h6 tag
+#
+
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl:  <http://www.w3.org/2002/07/owl#>.
+
+@prefix h: <../html.n3#>.
+@prefix t: <../tags.n3#>.
+@prefix a: <../attributes.n3#>.
+@prefix p: <../types.n3#>.
+@prefix s: <spec.n3#>.
+
+@prefix : <#>.
+
+:h6        a            h:Definition;
+           h:definedIn  s:spec;
+           h:for        t:h6;
+           h:starTag    h:required;
+           h:endTag     h:required.
+
+
+:lang      a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:h6;
+           h:containee  a:lang;
+           h:type       t:LanguageCode;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "the base language of an element's attribute values and text content".
+
+:dir       a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:h6;
+           h:containee  a:dir;
+           h:type       t:Direction;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "the base direction of directionally neutral text".
+
+:id        a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:h6;
+           h:containee  a:id;
+           h:type       t:ID;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "document-wide unique id".
+
+:class     a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:h6;
+           h:containee  a:class;
+           h:type       t:CDATA;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "space-separated list of classes".
+
+:style     a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:h6;
+           h:containee  a:style;
+           h:type       t:StyleSheet;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "associated style info".
+
+:title     a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:h6;
+           h:containee  a:title;
+           h:type       t:Text;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "advisory title".
+
+:onclick   a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:h6;
+           h:containee  a:onclick;
+           h:type       t:Script;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "a pointer button was clicked".
+
+:ondblclick a           h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:h6;
+           h:containee  a:ondblclick;
+           h:type       t:Script;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "a pointer button was double clicked".
+
+:onmousedown a          h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:h6;
+           h:containee  a:onmousedown;
+           h:type       t:Script;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "a pointer button was pressed down".
+
+:onmouseup a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:h6;
+           h:containee  a:onmouseup;
+           h:type       t:Script;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "a pointer button was released".
+
+:onmouseover a          h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:h6;
+           h:containee  a:onmouseover;
+           h:type       t:Script;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "a pointer was moved onto".
+
+:onmousemove a          h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:h6;
+           h:containee  a:onmousemove;
+           h:type       t:Script;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "a pointer was moved within".
+
+:onmouseout a           h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:h6;
+           h:containee  a:onmouseout;
+           h:type       t:Script;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "a pointer was moved away".
+
+:onkeypress a           h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:h6;
+           h:containee  a:onkeypress;
+           h:type       t:Script;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "a key was pressed and released".
+
+:onkeydown a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:h6;
+           h:containee  a:onkeydown;
+           h:type       t:Script;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "a key was pressed down".
+
+:onkeyup   a            h:Containment;
+           h:definedIn  s:spec;
+           h:container  t:h6;
+           h:containee  a:onkeyup;
+           h:type       t:Script;
+           h:mandatory  h:IMPLIED;
+           rdfs:comment "a key was released".

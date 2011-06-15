@@ -1,0 +1,50 @@
+#
+# Schema for browser
+#
+
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl:  <http://www.w3.org/2002/07/owl#>.
+
+@prefix : <#>.
+
+:BrowserFamily a owl:Class.
+:Browser a owl:Class.
+
+# properties for Browser
+
+:version a owl:DatatypeProperty;
+    rdfs:domain :Browser;
+    rdfs:range  xsd:string.
+
+:releaseAt a owl:DatatypeProperty;
+    rdfs:domain :Browser;
+    rdfs:range  xsd:date.
+
+:priorTo a owl:ObjectProperty;
+    rdf:type owl:TransitiveProperty;
+    rdfs:domain :Browser;
+    rdfs:range  :Browser.
+
+:descendantOf a owl:ObjectProperty;
+    owl:inverseOf :priorTo.
+
+:belongsTo a owl:ObjectProperty;
+    rdfs:domain :Browser;
+    rdfs:range  :BrowserFamily.
+
+# properties for BrowserFamily
+
+:name a owl:DatatypeProperty;
+    rdfs:domain :BrowserFamily;
+    rdfs:range  xsd:string.
+
+:hasVersionOf a owl:ObjectProperty;
+    owl:inverseOf :belongsTo.
+
+:latestVersion a owl:ObjectProperty;
+    rdfs:domain :BrowserFamily;
+    rdfs:range  :Browser.
+
+
